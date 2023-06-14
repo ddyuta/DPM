@@ -82,8 +82,17 @@ for p in range(100):
         local_distance = np.linalg.norm(template_data_3d_frame - uninput_data_3d_frame)
         distances[p][q] = local_distance
 
-#確認表示
+#各単語の最小距離を知りたいとき
+for p in range(100):
+    min_distance = float('inf')
+    for q in range(100):
+        if distances[p][q] < min_distance and p == q:
+            min_distance = distances[p][q]
+            print(p, min_distance)
+
+#ピンポイントで距離を知りたいとき
+print(distances[0][0])
+
+#テンプレートを固定して未入力１～１００までの距離を知りたいとき
 for n in range(100):
     print(distances[99][n])
-
-print(distances[99][0])
