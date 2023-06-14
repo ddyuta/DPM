@@ -70,16 +70,20 @@ for p in range(100):
         if template_framenum_frame < uninput_framenum_frame:
             random_numbers = random.sample(range(uninput_framenum_frame), diff)
             uninput_data_3d_frame = np.delete(uninput_data_3d_frame, random_numbers, axis=0)
+            for d in range(diff):
+                uninput_framenum_frame -= 1
         elif template_framenum_frame > uninput_framenum_frame:
             random_numbers = random.sample(range(template_framenum_frame), diff)
             template_data_3d_frame = np.delete(template_data_3d_frame, random_numbers, axis=0)
+            for d in range(diff):
+                template_framenum_frame -= 1
+
 
         local_distance = np.linalg.norm(template_data_3d_frame - uninput_data_3d_frame)
         distances[p][q] = local_distance
 
-min_distance = float('inf')
+#確認表示
+for n in range(100):
+    print(distances[99][n])
 
-#for n in range(100):
-#    print(distances[99][n])
-
-#print(distances[0][0])
+print(distances[99][0])
