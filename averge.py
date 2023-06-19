@@ -7,7 +7,7 @@ template_file_prefix = "city011/city011_"
 template_data = []
 template_framenum = []
 
-uninput_file_prefix = "city022/city022_"
+uninput_file_prefix = "city012/city012_"
 uninput_data = []
 uninput_framenum = []
 
@@ -112,11 +112,15 @@ for _ in range(1000):
     # 最小距離がp==qであればcorrect_countを1ずつカウントする
     for p in range(100):
         min_distance = float('inf')
+        tem_correct = 0
+        unin_correct = 0
         for q in range(100):
             if distances[p][q] < min_distance:
                 min_distance = distances[p][q]
-                if p == q:
-                    correct_count += 1
+                tem_correct = p
+                unin_correct = q
+        if tem_correct == unin_correct:
+            correct_count += 1
                 
     # 正解率を計算し、リストに追加
     correct_rate = correct_count / 100 * 100
