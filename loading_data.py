@@ -1,3 +1,5 @@
+#テンプレ―トをcity011として、未入力をcity012とするソースコード
+
 import numpy as np
 
 template_file_prefix = "city011/city011_"
@@ -31,6 +33,7 @@ for i in range(1, 101):
     #各単語のフレーム数
     template_framenum.append(line_counter - 3) #要素1：単語番号-1
 
+
 # テンプレートデータを3次元配列に変換
 template_data_3d = np.array(template_data) #要素1:単語番号-1　要素2:フレーム数-1　要素3:15次のメルケプストラム特徴量-1
 
@@ -54,9 +57,8 @@ for i in range(1, 101):
     #各単語のフレーム数
     uninput_framenum.append(line_counter - 3) #要素1：単語番号-1
 
-# テンプレートデータを3次元配列に変換
+# 未入力データを3次元配列に変換
 uninput_data_3d = np.array(uninput_data) #要素1:単語番号-1　要素2:フレーム数-1　要素3:15次のメルケプストラム特徴量-1
 
 #確認表示
 print(template_data_3d[99][90][14])
-print(uninput_data_3d[99][82][14])
