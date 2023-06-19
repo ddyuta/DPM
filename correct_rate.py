@@ -3,11 +3,11 @@
 import numpy as np
 import random
 
-template_file_prefix = "city021/city021_"
+template_file_prefix = "city011/city011_"
 template_data = []
 template_framenum = []
 
-uninput_file_prefix = "city022/city022_"
+uninput_file_prefix = "city012/city012_"
 uninput_data = []
 uninput_framenum = []
 
