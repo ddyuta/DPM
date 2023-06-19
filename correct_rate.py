@@ -108,6 +108,6 @@ for p in range(100):
             min_distance = distances[p][q]
             if p == q:
                 correct_count += 1
-
+                
 # 正解率の表示
 print("Correct rate:", correct_count / 100 * 100, "%")
