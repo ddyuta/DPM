@@ -2,6 +2,9 @@
 
 DPマッチングのリポジトリ
 
-1.loding_data.py
-2.fix_frame.py
-3.
+①.loding_data.py<br>
+②.fix_frame.py<br>
+③.word_distances.py<br>
+④.correct_rate.py<br><br>
+
+完成形averge.py
